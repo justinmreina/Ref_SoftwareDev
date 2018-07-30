@@ -1,0 +1,18 @@
+@title 		Staging Deleted files
+@ref 		https://stackoverflow.com/questions/12373733/staging-deleted-files
+
+
+@section 	Code Summary
+	git add *
+	git add -u
+	git status
+
+@section 	Procedure
+	1. move or remove all selected files
+		*renamed, moved to new location or deleted)
+
+	2. add all new content after changes
+		git add *
+
+	3. Update the Index('-u' <-> '-update')
+		git add -u

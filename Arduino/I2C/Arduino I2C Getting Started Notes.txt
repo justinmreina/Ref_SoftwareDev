@@ -1,0 +1,86 @@
+@date 		8/1/17
+@author 	Justin Reina
+
+@section 	Notes
+	@src 	How I2C Communication Works and How To Use It with Arduino
+	@url 	http://howtomechatronics.com/tutorials/arduino/how-i2c-
+			communication-works-and-how-to-use-it-with-arduino/
+
+	Video Makes Example, follow this
+	Wire can support multiple masters & slaves
+	Addressing is 8-bit or 10-bit
+	Open-drain (active low signaling)
+	Pullups required (2k:400kbps, 10k:100kbps typ)
+	
+	Format (8-bits at a time, msb first)
+		S - Start Condition	
+		D - Slave Address for message transmission (8b)
+			b7:1 - slave address
+			b0   - R/W bit			
+		A - Ack
+		D - Addressing Sequence (Internal Register Address) (8b)
+			b7:b0 - Register Address
+		A - Ack
+		D - Data Value (8b)
+			b7:b0 - Value
+		A - Ack
+		E - Stop
+		
+		Data is valid on clock edge configured (e.g. typically on SCL:H)
+		
+	Signals
+		S - Start Condition (Mstr)
+			SDA: H->L
+			SCL: H
+		
+		R/W - Read/Write
+			W: L
+			R: H
+		
+		A - Ack
+			Ack: L (by Slave)
+			Nak: H (else)
+		
+		E - Stop Condition
+			SDA: L->H
+			SCL: H
+
+@section 	Demo
+		Connect I2C (SDA, SCL)
+		Find Device Addresses (ID:0x0A/0x0B/0x0C, Lin:0x19, Mag:0x1E)
+		We can run scanner to find all addresses (i2c_scanner)	
+		#include <Wire.h>
+
+
+@section 	Demo Source
+		
+
+	
+@section 	LMS303 I2C Notes
+	ST - Std
+	The I2C embedded inside the LSM303DLHC behaves like a slave device
+	
+	Write Format (Table 11)
+	M: ST, SADW,    , SUB,    , DATA,    , SP
+	S: 		     SAK,      SAK,       SAK
+	
+	Read Format (Table 13)
+	M: ST, SADW,    , SUB,    , SR, SAD+R,    ,     , NMAK SP (end on NMAK?)
+	S: 		     SAK,      SAK,            SAK, DATA
+		
+	*SUB b7=0 to disable auto-incrementing
+
+@section 	Linear Accel Digital Interface
+	SAD: 0x19 (R: 0x33, W: 0x32)
+
+@section 	Mag Field Digital Interface
+	SAD: 0x1E (R: 0x3D, W: 0x3C)	
+	
+	
+	
+	
+	
+	
+	@post 	Danny Doc & Text!
+	
+

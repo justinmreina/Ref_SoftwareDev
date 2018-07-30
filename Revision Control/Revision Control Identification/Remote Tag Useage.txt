@@ -1,0 +1,8 @@
+
+Add:
+	git push origin --tags
+	https://stackoverflow.com/questions/18216991/create-a-tag-in-github-repository
+	
+Remove:
+	Manual in web-browser
+	https://help.github.com/articles/editing-and-deleting-releases/

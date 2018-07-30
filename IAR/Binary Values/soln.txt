@@ -1,0 +1,15 @@
+#include <stdint.h>
+
+//#include "../bsp/targets/support/binary_values_8_bit.h"
+
+#define b001100 0x0034
+
+
+int main( void )
+{
+  uint16_t testVar = b001100;
+
+//<TODO>  uint16_t testVar = 0x1234;
+
+  return testVar;
+}

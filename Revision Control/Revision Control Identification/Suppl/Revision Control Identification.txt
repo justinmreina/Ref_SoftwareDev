@@ -1,0 +1,27 @@
+
+@brief 		Revision control basics
+@date 		8/30/17
+@rel		3
+
+
+@section 	Summary
+	Revision numbering is used throughout the entire product cycle, including conceptualization, prototype, development, productization & release
+
+@section 	Numbering Schema (numeric)
+	X.Y.Z
+		X - Major
+		Y - Minor
+		Z - Revision
+
+@section 	Example
+	@note In communication the numbering schema used is decided at the time of use, e.g. -
+		- 'DTECTS 1'     targets this market 
+		- 'DTECTS 1.2'   enables this feature
+		- 'DTECTS 1.2.5' fixes this bug
+
+@section 	Notes
+	Product Naming is independent of the revision numbering. Revision numbering is primarily an internal tool, and may be used externally when needed.
+
+@section 	Reference
+	Software Versioning - Wikipedia (https://en.wikipedia.org/wiki/Software_versioning)
+

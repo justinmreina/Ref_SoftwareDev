@@ -1,0 +1,4 @@
+@soln 	#pragma diag_suppress 177 // supress #177-D function  was declared but never referenced
+
+@src 	https://stackoverflow.com/questions/6882336/how-to-disable-warning-in-compiling-c-code
+
