@@ -1,0 +1,45 @@
+@brief 		EXE Development
+@details 	Preferred Method
+@auth 		Justin Reina
+@date 		7/26/19
+
+@section 	Software
+	Eclipse CDT		(Eclipse Cpp)
+	pkg-config		(Eclipse Marketplace)
+	
+@section 	Opens
+	• Create Project
+	• Create EXE
+	• GUI creation
+	• Text
+	• Label
+	• Button
+	• Picture
+	• Creats Files
+
+@section 	Setup
+	• Install MSYS2 [3]
+	• MSYS2: "pacman -S mingw-w64-x86_64-gcc" [2]
+	• MSYS2: "pacman -S mingw-w64-x86_64-gtkmm3" [2]
+	• MSYS2: "pacman -S pkg-config" [2]
+	
+@section 	Create Project
+	• New C++ Managed Build (Empty Project, CrossGcc, HelloWorld-Gtkmmm)
+	• Update C/C++ Includes
+		*e.g. "C:\Sw\msys64\mingw64\include\gtkmm-3.0"
+		*e.g. "C:\Sw\msys64\mingw64\include\glibmm-2.4"
+	...
+
+@note 	default values are used unless otherwise specified
+
+@section 	Reference
+	1. Hello World GTK3 program in Eclipse | Coffee Oriented Programming
+		• https://coffeeorientedprogramming.wordpress.com/
+		  2014/09/23/hello-world-gtk3-program-in-eclipse/
+	2. Projects/gtkmm/MSWindows - GNOME Wiki! 
+		• https://wiki.gnome.org/Projects/gtkmm/MSWindows
+	3. MSYS2 homepage
+		• http://www.msys2.org/
+	4. C++ Interfaces for GTK+ and GNOME
+		• https://www.gtkmm.org/en/
+
